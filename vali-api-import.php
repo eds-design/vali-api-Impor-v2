@@ -4,18 +4,11 @@ Plugin Name: Vali API Import
 Description: A plugin to import product data from Vali API and integrate with WP All Import PRO.
 Version: 2.0
 Author: Georgi Georgiev
-Text Domain: vali-api-import
-Domain Path: /languages
 */
 
 if (!defined('ABSPATH')) {
     exit;
 }
-
-function vali_api_import_load_textdomain() {
-    load_plugin_textdomain('vali-api-import', false, dirname(plugin_basename(__FILE__)) . '/languages');
-}
-add_action('plugins_loaded', 'vali_api_import_load_textdomain');
 
 require_once plugin_dir_path(__FILE__) . 'includes/settings.php';
 require_once plugin_dir_path(__FILE__) . 'includes/api-handler.php';
